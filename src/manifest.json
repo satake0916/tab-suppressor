@@ -1,10 +1,24 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "tab-suppressor",
+    "description": "Suppress too many tabs",
     "version": "1.0",
-    "action": {
-      "default_popup": "hello.html",
-      "default_icon": "hello.png"
-    }
+    "action": {},
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "main.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.google.com/"],
+            "js": [
+                "display.js"
+            ]
+        }
+    ]
   }

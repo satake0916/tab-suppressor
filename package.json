@@ -1,12 +1,15 @@
 {
   "name": "tab-suppressor",
   "version": "1.0.0",
-  "description": "",
+  "description": "Suppress too many tabs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier \"./src/**/*.js\" --write"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "satake_makoto",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  }
 }
